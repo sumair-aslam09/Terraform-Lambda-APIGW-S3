@@ -1,4 +1,4 @@
-Part-1 Execution without API_GATEWAY
+Part-1 Create Lambda FUnction & Execution without API_GATEWAY
 -------------------------------------
 $terraform apply
 
@@ -16,12 +16,12 @@ $cat response.json
 {"statusCode":200,"headers":{"Content-Type":"application/json"},"body":"{\"message\":\"Hello, World!\"}"}
 
 =======================================================================================================================
-Part-2 With API GATEWAY 
+Part-2 Lambda Function With API GATEWAY 
 -----------------------------------
 $Terraform apply 
 hello_base_url = "https://fhwr4nldp8.execute-api.ap-south-1.amazonaws.com/dev"
 
-1.Test HTTP GET method first, append the hello endpoint and optionally provide the URL parameter.
+a).Test HTTP GET method first, append the hello endpoint and optionally provide the URL parameter.
 -------------------------------------------------------------------------------------------------
 curl "https://fhwr4nldp8.execute-api.ap-south-1.amazonaws.com/dev/hello?Name=Sumair"
 
@@ -29,7 +29,7 @@ output:
 -------
 {"message":"Hello, Sumair!"}
 
-2.Also, let's test the POST method. In this case, we provide a payload as a JSON object to the same hello endpoint.
+b).Also, let's test the POST method. In this case, we provide a payload as a JSON object to the same hello endpoint.
 -------------------------------------------------------------------------------------------------------------------
 curl -X POST \
 -H "Content-Type: application/json" \
@@ -42,7 +42,7 @@ Output:
 
 //////////////////////////////////////////////////////////////////////////////////////////
 
-Part-3
+Part-3 Create Lambda Function with Dependencies & Access to S3 Bucket
 ----------------
 Install them to get package.json file
 $npm init 
