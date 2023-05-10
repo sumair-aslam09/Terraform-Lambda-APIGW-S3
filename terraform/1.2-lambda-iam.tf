@@ -1,7 +1,7 @@
 #aws iam policy generator for lambda 
 resource "aws_iam_role" "hello_lambda_exec" {
     name = "hello-lambda"
-    assume_role_policy = "${file("iam-policy/lambda-assume-policy.json")}"
+    assume_role_policy = "${file("../iam-policy/lambda-assume-policy.json")}"
 }
 
 resource "aws_iam_role_policy_attachment" "hello_lambda_policy" {
