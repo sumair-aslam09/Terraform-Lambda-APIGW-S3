@@ -19,7 +19,7 @@ resource "aws_s3_object" "lambda_hello" {
 resource "aws_lambda_function" "hello" {
     function_name = "hello"
 
-    s3_bucket = aws_s3_bucket.lambda__bucket.id
+    s3_bucket = aws_s3_bucket.lambda_bucket.id
     s3_key = aws_s3_object.lambda_hello.key
 
     runtime = "nodejs16.x"
@@ -27,7 +27,7 @@ resource "aws_lambda_function" "hello" {
 
     source_code_hash = data.archive_file.lambda_hello.output_base64sha256
 
-    role = aws_iam_role.lambda_role.arn
+    role = aws_iam_role.hello_lambda_exec.arn
 }
 
 #CLOUD-WATCH LOGS
