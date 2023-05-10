@@ -15,20 +15,22 @@ If you print the response, you should see the message Hello World!
 $cat response.json
 {"statusCode":200,"headers":{"Content-Type":"application/json"},"body":"{\"message\":\"Hello, World!\"}"}
 
-=========================================================================================================================
+=======================================================================================================================
 Part-2 With API GATEWAY 
 -----------------------------------
-Terraform apply 
-hello_base_url = "https://vr.ap-south-1.amazonaws.com/dev"
+$Terraform apply 
+hello_base_url = "https://fhwr4nldp8.execute-api.ap-south-1.amazonaws.com/dev"
 
-Test HTTP GET method first, append the hello endpoint and optionally provide the URL parameter.
-curl "https://<id>.execute-api.us-east-1.amazonaws.com/dev/hello?Name=Anton"
+1.Test HTTP GET method first, append the hello endpoint and optionally provide the URL parameter.
+-------------------------------------------------------------------------------------------------
+curl "https://fhwr4nldp8.execute-api.ap-south-1.amazonaws.com/dev/hello?Name=Sumair"
 
-Also, let's test the POST method. In this case, we provide a payload as a JSON object to the same hello endpoint.
+2.Also, let's test the POST method. In this case, we provide a payload as a JSON object to the same hello endpoint.
+-------------------------------------------------------------------------------------------------------------------
 curl -X POST \
 -H "Content-Type: application/json" \
--d '{"name":"Anton"}' \
-"https://<id>.execute-api.us-east-1.amazonaws.com/dev/hello"
+-d '{"name":"Aslam"}' \
+"https://fhwr4nldp8.execute-api.ap-south-1.amazonaws.com/dev/hello"
 
 //////////////////////////////////////////////////////////////////////////////////////////
 
