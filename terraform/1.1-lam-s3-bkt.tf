@@ -7,7 +7,7 @@ resource "random_pet" "lambda_bucket_name" {
 #s3 bucket
 resource "aws_s3_bucket" "lambda_bucket" {
     bucket=random_pet.lambda_bucket_name.id
-    force_dstroy = true
+    force_destroy = true
 }
 
 #public access block
