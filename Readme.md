@@ -59,4 +59,5 @@ aws lambda invoke \
  --payload '{"bucket":"output-bucket-name","object":"hello.json"}' \
  response.json
 
- $cat respo
+ $cat response.json
+ "{\"name\":\"S3\"}"%
