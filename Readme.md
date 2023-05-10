@@ -1,4 +1,5 @@
 Part-1 Execution without API_GATEWAY
+-------------------------------------
 $terraform apply
 
 Since we don't have API Gateway just yet, let's invoke this function with the aws lambda invoke-command.
@@ -14,6 +15,7 @@ $cat response.json
 
 ///////////////////////////////////////////////////////////////////////////////////////
 Part-2 With API GATEWAY 
+-----------------------------------
 Terraform apply 
 hello_base_url = "https://vr.ap-south-1.amazonaws.com/dev"
 
@@ -29,6 +31,7 @@ curl -X POST \
 //////////////////////////////////////////////////////////////////////////////////////////
 
 Part-3
+----------------
 Install them to get package.json file
 $npm init 
 $npm install aws-sdk
