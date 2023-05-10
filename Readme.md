@@ -15,7 +15,7 @@ If you print the response, you should see the message Hello World!
 $cat response.json
 {"statusCode":200,"headers":{"Content-Type":"application/json"},"body":"{\"message\":\"Hello, World!\"}"}
 
-///////////////////////////////////////////////////////////////////////////////////////
+=========================================================================================================================
 Part-2 With API GATEWAY 
 -----------------------------------
 Terraform apply 
