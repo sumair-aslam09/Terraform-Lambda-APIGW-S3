@@ -19,11 +19,11 @@ $cat response.json
 Part-2 Lambda Function With API GATEWAY 
 -----------------------------------
 $Terraform apply 
-hello_base_url = "https://fhwr4nldp8.execute-api.ap-south-1.amazonaws.com/dev"
+hello_base_url = "https://ots5xgo7p0.execute-api.ap-south-1.amazonaws.com/dev"
 
 a).Test HTTP GET method first, append the hello endpoint and optionally provide the URL parameter.
 -------------------------------------------------------------------------------------------------
-curl "https://fhwr4nldp8.execute-api.ap-south-1.amazonaws.com/dev/hello?Name=Sumair"
+curl "https://ots5xgo7p0.execute-api.ap-south-1.amazonaws.com/dev/hello?Name=Sumair"
 
 output:
 -------
@@ -34,7 +34,7 @@ b).Also, let's test the POST method. In this case, we provide a payload as a JSO
 curl -X POST \
 -H "Content-Type: application/json" \
 -d '{"name":"Aslam"}' \
-"https://fhwr4nldp8.execute-api.ap-south-1.amazonaws.com/dev/hello"
+""https://ots5xgo7p0.execute-api.ap-south-1.amazonaws.com/dev/hello"
 
 Output:
 -------
