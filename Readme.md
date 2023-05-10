@@ -4,14 +4,16 @@ $terraform apply
 
 Since we don't have API Gateway just yet, let's invoke this function with the aws lambda invoke-command.
 $aws lambda invoke --region=ap-south-1 --function-name=hello response.json
-
-$aws lambda invoke \ 
---region=ap-south-1 \
---function-name=hello \
-response.json (any file.json)
-
+Output:
+------
+{
+    "StatusCode": 200,
+    "ExecutedVersion": "$LATEST"
+}
+---------------------------------
 If you print the response, you should see the message Hello World!
 $cat response.json
+{"statusCode":200,"headers":{"Content-Type":"application/json"},"body":"{\"message\":\"Hello, World!\"}"}
 
 ///////////////////////////////////////////////////////////////////////////////////////
 Part-2 With API GATEWAY 
