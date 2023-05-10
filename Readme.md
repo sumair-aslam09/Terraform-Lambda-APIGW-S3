@@ -25,12 +25,20 @@ hello_base_url = "https://fhwr4nldp8.execute-api.ap-south-1.amazonaws.com/dev"
 -------------------------------------------------------------------------------------------------
 curl "https://fhwr4nldp8.execute-api.ap-south-1.amazonaws.com/dev/hello?Name=Sumair"
 
+output:
+-------
+{"message":"Hello, Sumair!"}
+
 2.Also, let's test the POST method. In this case, we provide a payload as a JSON object to the same hello endpoint.
 -------------------------------------------------------------------------------------------------------------------
 curl -X POST \
 -H "Content-Type: application/json" \
 -d '{"name":"Aslam"}' \
 "https://fhwr4nldp8.execute-api.ap-south-1.amazonaws.com/dev/hello"
+
+Output:
+-------
+{"message":"Hello, Aslam!"}
 
 //////////////////////////////////////////////////////////////////////////////////////////
 
