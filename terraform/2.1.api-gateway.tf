@@ -1,7 +1,7 @@
 #API_GATEWAY
 resource "aws_apigatewayv2_api" "main" {
     name = "main"
-    protocol = "HTTP"
+    protocol_type = "HTTP"
 }
 
 #API_GATEWAY STAGE
