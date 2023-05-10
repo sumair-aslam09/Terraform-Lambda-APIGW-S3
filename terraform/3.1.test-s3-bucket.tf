@@ -1,6 +1,6 @@
 resource "random_pet" "test_bucket_name" {
     prefix = "test"
-    lenght = 2
+    length = 2
 }
 
 resource "aws_s3_bucket" "test" {
